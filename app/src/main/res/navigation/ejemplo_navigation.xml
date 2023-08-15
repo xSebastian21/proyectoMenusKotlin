@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ejemplo_navigation"
+    app:startDestination="@id/pantallaPrincipalFragment">
+
+    <fragment
+        android:id="@+id/pantallaPrincipalFragment"
+        android:name="com.example.proyectomenus.PantallaPrincipalFragment"
+        android:label="fragment_pantalla_principal"
+        tools:layout="@layout/fragment_pantalla_principal" >
+        <action
+            android:id="@+id/action_pantallaPrincipalFragment_to_pantallaUnoFragmento"
+            app:destination="@id/pantallaUnoFragmento" />
+        <action
+            android:id="@+id/action_pantallaPrincipalFragment_to_pantallaUnoFragmento2"
+            app:destination="@id/pantallaUnoFragmento" />
+        <action
+            android:id="@+id/action_pantallaPrincipalFragment_to_pantallaDosFragemento"
+            app:destination="@id/pantallaDosFragemento" />
+    </fragment>
+    <fragment
+        android:id="@+id/pantallaUnoFragmento"
+        android:name="com.example.proyectomenus.PantallaUnoFragmento"
+        android:label="fragment_pantalla_uno_fragmento"
+        tools:layout="@layout/fragment_pantalla_uno_fragmento" >
+        <action
+            android:id="@+id/action_pantallaUnoFragmento_to_pantallaDosFragemento"
+            app:destination="@id/pantallaDosFragemento" />
+    </fragment>
+    <fragment
+        android:id="@+id/pantallaDosFragemento"
+        android:name="com.example.proyectomenus.PantallaDosFragemento"
+        android:label="fragment_pantalla_dos_fragemento"
+        tools:layout="@layout/fragment_pantalla_dos_fragemento" />
+</navigation>
